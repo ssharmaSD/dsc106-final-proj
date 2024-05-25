@@ -1,9 +1,16 @@
 <section id="intro">
-  <h1 id="intro-hed">Title Of The Article</h1>
-  <h1 class="intro-sub">Subtitle of the article.</h1>
+  <h1 id="intro-hed">OUR INVESTIGATIVE QUESTION</h1>
+  <h1 class="intro-sub">Created by Team King Gizzard and the Vizzard Wizzards</h1>
+  
+  <h3>Created by:</h3>
+
   <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Author Name</a>, Month Year
+    Suhani Sharma, Ifunanya Okoroma, Antara Sengupta
   </h3>
+
+  <h3>27 May 2024</h3>
+
+
 </section>
 
 <style>

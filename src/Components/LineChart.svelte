@@ -37,10 +37,11 @@
     .curve(curveStep);
 </script>
 
-<h1 class="body-header">Responsive, Static Chart Example</h1>
+<h1 class="body-header">Alcohol Type Consumption by Country</h1>
 <p class="body-text">
-  This component is an example of a responsive chart built with Svelte and
-  D3.js.
+  With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. 
+  Now it's your turn to explore! <strong>Choose a country from the dropdown/type it in the box</strong> to see which type of alcohol is most popular in each country.
+  The original data set can be found from this <a href="https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption">fivethirtyeight</a> link. 
 </p>
 
 <div id="error-chart" bind:offsetWidth={width} bind:offsetHeight={height}>

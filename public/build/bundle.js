@@ -744,34 +744,39 @@ var app = (function () {
     	let t1;
     	let h11;
     	let t3;
-    	let h3;
-    	let a;
+    	let h30;
     	let t5;
+    	let h31;
+    	let t7;
+    	let h32;
 
     	const block = {
     		c: function create() {
     			section = element("section");
     			h10 = element("h1");
-    			h10.textContent = "Title Of The Article";
+    			h10.textContent = "OUR INVESTIGATIVE QUESTION";
     			t1 = space();
     			h11 = element("h1");
-    			h11.textContent = "Subtitle of the article.";
+    			h11.textContent = "Created by Team King Gizzard and the Vizzard Wizzards";
     			t3 = space();
-    			h3 = element("h3");
-    			a = element("a");
-    			a.textContent = "Author Name";
-    			t5 = text(", Month Year");
+    			h30 = element("h3");
+    			h30.textContent = "Created by:";
+    			t5 = space();
+    			h31 = element("h3");
+    			h31.textContent = "Suhani Sharma, Ifunanya Okoroma, Antara Sengupta";
+    			t7 = space();
+    			h32 = element("h3");
+    			h32.textContent = "27 May 2024";
     			attr_dev(h10, "id", "intro-hed");
     			attr_dev(h10, "class", "svelte-x47e3y");
     			add_location(h10, file$8, 1, 2, 23);
     			attr_dev(h11, "class", "intro-sub svelte-x47e3y");
-    			add_location(h11, file$8, 2, 2, 70);
-    			attr_dev(a, "href", "https://twitter.com/");
-    			attr_dev(a, "target", "_blank");
-    			add_location(a, file$8, 4, 4, 150);
-    			attr_dev(h3, "id", "intro__date");
-    			attr_dev(h3, "class", "svelte-x47e3y");
-    			add_location(h3, file$8, 3, 2, 124);
+    			add_location(h11, file$8, 2, 2, 76);
+    			add_location(h30, file$8, 4, 2, 162);
+    			attr_dev(h31, "id", "intro__date");
+    			attr_dev(h31, "class", "svelte-x47e3y");
+    			add_location(h31, file$8, 6, 2, 186);
+    			add_location(h32, file$8, 10, 2, 272);
     			attr_dev(section, "id", "intro");
     			attr_dev(section, "class", "svelte-x47e3y");
     			add_location(section, file$8, 0, 0, 0);
@@ -785,9 +790,11 @@ var app = (function () {
     			append_dev(section, t1);
     			append_dev(section, h11);
     			append_dev(section, t3);
-    			append_dev(section, h3);
-    			append_dev(h3, a);
-    			append_dev(h3, t5);
+    			append_dev(section, h30);
+    			append_dev(section, t5);
+    			append_dev(section, h31);
+    			append_dev(section, t7);
+    			append_dev(section, h32);
     		},
     		p: noop,
     		i: noop,
@@ -855,7 +862,7 @@ var app = (function () {
     			p0 = element("p");
     			t0 = text("Lorem ipsum dolor sit amet ");
     			a = element("a");
-    			a.textContent = "random link";
+    			a.textContent = "insert the ted link";
     			t2 = text(" adipisicing elit. Esse\n    dolor nobis\n    ");
     			span = element("span");
     			span.textContent = "bold text";
@@ -866,11 +873,11 @@ var app = (function () {
     			attr_dev(a, "href", "");
     			add_location(a, file$7, 5, 31, 85);
     			attr_dev(span, "class", "bold");
-    			add_location(span, file$7, 7, 4, 155);
+    			add_location(span, file$7, 7, 4, 163);
     			attr_dev(p0, "class", "body-text");
     			add_location(p0, file$7, 4, 2, 32);
     			attr_dev(p1, "class", "body-text");
-    			add_location(p1, file$7, 13, 2, 573);
+    			add_location(p1, file$7, 13, 2, 581);
     			add_location(section, file$7, 3, 0, 20);
     		},
     		l: function claim(nodes) {
@@ -20292,7 +20299,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (52:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}
+    // (53:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}
     function create_each_block_1(ctx) {
     	let g;
     	let line_1;
@@ -20314,14 +20321,14 @@ var app = (function () {
     			attr_dev(line_1, "y1", "0");
     			attr_dev(line_1, "y2", "0");
     			attr_dev(line_1, "stroke", "black");
-    			add_location(line_1, file$5, 54, 8, 1582);
+    			add_location(line_1, file$5, 55, 8, 1941);
     			attr_dev(text_1, "class", "error-axis-text svelte-11zu33o");
     			attr_dev(text_1, "y", "0");
     			attr_dev(text_1, "text-anchor", "end");
     			attr_dev(text_1, "dominant-baseline", "middle");
-    			add_location(text_1, file$5, 62, 8, 1769);
+    			add_location(text_1, file$5, 63, 8, 2128);
     			attr_dev(g, "transform", g_transform_value = `translate(${/*margin*/ ctx[7].left - 5} ${/*accuracyScale*/ ctx[3](/*tick*/ ctx[11]) + 0})`);
-    			add_location(g, file$5, 52, 6, 1443);
+    			add_location(g, file$5, 53, 6, 1802);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -20347,14 +20354,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(52:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}",
+    		source: "(53:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (117:4) {#each xScale.ticks() as tick}
+    // (118:4) {#each xScale.ticks() as tick}
     function create_each_block$2(ctx) {
     	let g;
     	let text_1;
@@ -20370,9 +20377,9 @@ var app = (function () {
     			attr_dev(text_1, "class", "error-axis-text svelte-11zu33o");
     			attr_dev(text_1, "y", "15");
     			attr_dev(text_1, "text-anchor", "end");
-    			add_location(text_1, file$5, 118, 8, 3328);
+    			add_location(text_1, file$5, 119, 8, 3687);
     			attr_dev(g, "transform", g_transform_value = `translate(${/*xScale*/ ctx[2](/*tick*/ ctx[11]) + 0} ${/*height*/ ctx[0] - /*margin*/ ctx[7].bottom})`);
-    			add_location(g, file$5, 117, 6, 3245);
+    			add_location(g, file$5, 118, 6, 3604);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -20395,7 +20402,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(117:4) {#each xScale.ticks() as tick}",
+    		source: "(118:4) {#each xScale.ticks() as tick}",
     		ctx
     	});
 
@@ -20406,7 +20413,12 @@ var app = (function () {
     	let h1;
     	let t1;
     	let p;
-    	let t3;
+    	let t2;
+    	let strong;
+    	let t4;
+    	let a;
+    	let t6;
+    	let t7;
     	let div;
     	let svg;
     	let line0;
@@ -20423,11 +20435,11 @@ var app = (function () {
     	let path3;
     	let path3_d_value;
     	let text0;
-    	let t4;
+    	let t8;
     	let text0_y_value;
     	let text0_x_value;
     	let text1;
-    	let t5;
+    	let t9;
     	let text1_x_value;
     	let svg_width_value;
     	let svg_height_value;
@@ -20451,11 +20463,17 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			h1 = element("h1");
-    			h1.textContent = "Responsive, Static Chart Example";
+    			h1.textContent = "Alcohol Type Consumption by Country";
     			t1 = space();
     			p = element("p");
-    			p.textContent = "This component is an example of a responsive chart built with Svelte and\n  D3.js.";
-    			t3 = space();
+    			t2 = text("With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. \n  Now it's your turn to explore! ");
+    			strong = element("strong");
+    			strong.textContent = "Choose a country from the dropdown/type it in the box";
+    			t4 = text(" to see which type of alcohol is most popular in each country.\n  The original data set can be found from this ");
+    			a = element("a");
+    			a.textContent = "fivethirtyeight";
+    			t6 = text(" link.");
+    			t7 = space();
     			div = element("div");
     			svg = svg_element("svg");
 
@@ -20470,9 +20488,9 @@ var app = (function () {
     			path2 = svg_element("path");
     			path3 = svg_element("path");
     			text0 = svg_element("text");
-    			t4 = text("Decision Boundary Threshold");
+    			t8 = text("Decision Boundary Threshold");
     			text1 = svg_element("text");
-    			t5 = text("Score");
+    			t9 = text("Score");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
@@ -20480,8 +20498,11 @@ var app = (function () {
 
     			attr_dev(h1, "class", "body-header");
     			add_location(h1, file$5, 39, 0, 1014);
+    			add_location(strong, file$5, 42, 33, 1252);
+    			attr_dev(a, "href", "https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption");
+    			add_location(a, file$5, 43, 47, 1432);
     			attr_dev(p, "class", "body-text");
-    			add_location(p, file$5, 40, 0, 1076);
+    			add_location(p, file$5, 40, 0, 1079);
     			attr_dev(line0, "class", "error-axis-line");
     			attr_dev(line0, "y1", line0_y__value = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
     			attr_dev(line0, "y2", line0_y__value_1 = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
@@ -20489,7 +20510,7 @@ var app = (function () {
     			attr_dev(line0, "x2", /*width*/ ctx[1]);
     			attr_dev(line0, "stroke", "black");
     			attr_dev(line0, "stroke-width", "2");
-    			add_location(line0, file$5, 73, 4, 2042);
+    			add_location(line0, file$5, 74, 4, 2401);
     			attr_dev(line1, "class", "error-axis-line");
     			attr_dev(line1, "y1", /*margin*/ ctx[7].top);
     			attr_dev(line1, "y2", line1_y__value_1 = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
@@ -20497,39 +20518,39 @@ var app = (function () {
     			attr_dev(line1, "x2", /*margin*/ ctx[7].left);
     			attr_dev(line1, "stroke", "black");
     			attr_dev(line1, "stroke-width", "2");
-    			add_location(line1, file$5, 84, 4, 2314);
+    			add_location(line1, file$5, 85, 4, 2673);
     			attr_dev(path0, "class", "outline-line svelte-11zu33o");
     			attr_dev(path0, "d", path0_d_value = /*accuracyPath*/ ctx[5](errorData));
-    			add_location(path0, file$5, 94, 4, 2514);
+    			add_location(path0, file$5, 95, 4, 2873);
     			attr_dev(path1, "class", "path-line svelte-11zu33o");
     			attr_dev(path1, "d", path1_d_value = /*accuracyPath*/ ctx[5](errorData));
     			attr_dev(path1, "stroke", "#c9208a");
-    			add_location(path1, file$5, 95, 4, 2581);
+    			add_location(path1, file$5, 96, 4, 2940);
     			attr_dev(path2, "class", "outline-line svelte-11zu33o");
     			attr_dev(path2, "d", path2_d_value = /*precisionPath*/ ctx[4](errorData));
-    			add_location(path2, file$5, 96, 4, 2662);
+    			add_location(path2, file$5, 97, 4, 3021);
     			attr_dev(path3, "class", "path-line svelte-11zu33o");
     			attr_dev(path3, "d", path3_d_value = /*precisionPath*/ ctx[4](errorData));
     			attr_dev(path3, "stroke", "#ab00d6");
-    			add_location(path3, file$5, 97, 4, 2730);
+    			add_location(path3, file$5, 98, 4, 3089);
     			attr_dev(text0, "class", "error-axis-label svelte-11zu33o");
     			attr_dev(text0, "y", text0_y_value = /*height*/ ctx[0] + /*margin*/ ctx[7].bottom);
     			attr_dev(text0, "x", text0_x_value = (/*width*/ ctx[1] + /*margin*/ ctx[7].left) / 2);
     			attr_dev(text0, "text-anchor", "middle");
-    			add_location(text0, file$5, 101, 4, 2843);
+    			add_location(text0, file$5, 102, 4, 3202);
     			attr_dev(text1, "class", "error-axis-label svelte-11zu33o");
     			attr_dev(text1, "y", /*margin*/ ctx[7].left / 3);
     			attr_dev(text1, "x", text1_x_value = -(/*height*/ ctx[0] / 2));
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "transform", "rotate(-90)");
-    			add_location(text1, file$5, 107, 4, 3020);
+    			add_location(text1, file$5, 108, 4, 3379);
     			attr_dev(svg, "width", svg_width_value = /*width*/ ctx[1] + /*margin*/ ctx[7].left + /*margin*/ ctx[7].right);
     			attr_dev(svg, "height", svg_height_value = /*height*/ ctx[0] + /*margin*/ ctx[7].top + /*margin*/ ctx[7].bottom);
-    			add_location(svg, file$5, 46, 2, 1265);
+    			add_location(svg, file$5, 47, 2, 1624);
     			attr_dev(div, "id", "error-chart");
     			attr_dev(div, "class", "svelte-11zu33o");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[9].call(div));
-    			add_location(div, file$5, 45, 0, 1188);
+    			add_location(div, file$5, 46, 0, 1547);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20538,7 +20559,12 @@ var app = (function () {
     			insert_dev(target, h1, anchor);
     			insert_dev(target, t1, anchor);
     			insert_dev(target, p, anchor);
-    			insert_dev(target, t3, anchor);
+    			append_dev(p, t2);
+    			append_dev(p, strong);
+    			append_dev(p, t4);
+    			append_dev(p, a);
+    			append_dev(p, t6);
+    			insert_dev(target, t7, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, svg);
 
@@ -20555,9 +20581,9 @@ var app = (function () {
     			append_dev(svg, path2);
     			append_dev(svg, path3);
     			append_dev(svg, text0);
-    			append_dev(text0, t4);
+    			append_dev(text0, t8);
     			append_dev(svg, text1);
-    			append_dev(text1, t5);
+    			append_dev(text1, t9);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				if (each_blocks[i]) {
@@ -20672,7 +20698,7 @@ var app = (function () {
     			if (detaching) detach_dev(h1);
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(p);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(t7);
     			if (detaching) detach_dev(div);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);
@@ -22371,14 +22397,14 @@ var app = (function () {
     		c: function create() {
     			section = element("section");
     			h1 = element("h1");
-    			h1.textContent = "Concluding Text";
+    			h1.textContent = "Our Conclusion";
     			t1 = space();
     			p = element("p");
-    			p.textContent = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos voluptas dicta\n    blanditiis doloremque dolorum asperiores fugiat non, obcaecati maiores id,\n    voluptatum possimus libero iure laudantium dignissimos corrupti? Iure omnis\n    consectetur aperiam ipsam quod eum quas similique atque laboriosam ex\n    accusantium quaerat laudantium, est a libero sed cumque odio perspiciatis\n    enim, sequi, corrupti alias beatae nulla. Iure est ut dignissimos debitis\n    optio quasi vel distinctio officiis doloremque, ad voluptates, omnis nam\n    corporis, aut exercitationem ex excepturi tempore et modi unde alias nemo\n    accusantium. Tempore odio nulla ex ad ut molestiae unde minima ipsam\n    aliquid, omnis, labore commodi aliquam incidunt ratione autem?";
+    			p.textContent = "In conclusion........";
     			attr_dev(h1, "class", "body-header");
     			add_location(h1, file$2, 1, 2, 28);
     			attr_dev(p, "class", "body-text");
-    			add_location(p, file$2, 2, 2, 75);
+    			add_location(p, file$2, 2, 2, 74);
     			attr_dev(section, "id", "conclusion");
     			attr_dev(section, "class", "svelte-x4u2ks");
     			add_location(section, file$2, 0, 0, 0);
