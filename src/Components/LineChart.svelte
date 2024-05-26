@@ -5,6 +5,8 @@
   import { csv } from "d3-fetch";
 
   <!-- const formatter = format(".0%"); -->
+  <!-- const formatter = format(".0%"); -->
+  <!-- const formatter = format(".0%"); -->
 
   let height = 500;
   let width = 500;
