@@ -1,8 +1,17 @@
 <script>
+<<<<<<< HEAD
   import { scaleBand, scaleLinear } from "d3-scale";
   import { select } from "d3-selection";
   import { csv } from "d3-fetch";
   import * as d3 from "d3";
+=======
+  import { line, curveStep } from "d3-shape";
+  import { scaleLinear } from "d3-scale";
+  import { errorData } from "../datasets.js";
+  import { format } from "d3-format";
+
+  const formatter = format(".0%");
+>>>>>>> parent of b485785 (adjustments to bar chart write up)
 
   let height = 500;
   let width = 500;
@@ -14,6 +23,7 @@
     right: mobile ? 0 : 10,
   };
 
+<<<<<<< HEAD
   let data = [];
 <<<<<<< HEAD:src/Components/LineChart.svelte
   let selectedCountry = 'Albania'; // Default selected country
@@ -85,6 +95,8 @@
   csv(drinks.csv)
 
 
+=======
+>>>>>>> parent of b485785 (adjustments to bar chart write up)
   $: xScale = scaleLinear()
     .domain([0, 14.4])
     .range([margin.left, width - margin.right]);
@@ -108,8 +120,8 @@
 </script>
 
 <h1 class="body-header">Alcohol Type Consumption by Country</h1>
-
 <p class="body-text">
+<<<<<<< HEAD
   With an understanding of how alcohol consumption began in ancient times 
   let us explore how it looks in modern day.
 </p>
@@ -132,6 +144,11 @@
 <p class="body-text">
   <strong>**</strong>For this prototype our bar chart only shows information for one hard-coded
   country and we hope to improve the interaction of this in the final model.  
+=======
+  With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. 
+  Now it's your turn to explore! <strong>Choose a country from the dropdown/type it in the box</strong> to see which type of alcohol is most popular in each country.
+  The original data set can be found from this <a href="https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption">fivethirtyeight</a> link. 
+>>>>>>> parent of b485785 (adjustments to bar chart write up)
 </p>
 
 <div id="error-chart" bind:offsetWidth={width} bind:offsetHeight={height}>
