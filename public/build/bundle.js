@@ -851,33 +851,26 @@ var app = (function () {
     	let t0;
     	let a;
     	let t2;
-    	let span;
-    	let t4;
-    	let t5;
+    	let t3;
     	let p1;
 
     	const block = {
     		c: function create() {
     			section = element("section");
     			p0 = element("p");
-    			t0 = text("Lorem ipsum dolor sit amet ");
+    			t0 = text("Introduction paragraph where we give the background on the story we wanted to explore. \n    ");
     			a = element("a");
-    			a.textContent = "insert the ted link";
-    			t2 = text(" adipisicing elit. Esse\n    dolor nobis\n    ");
-    			span = element("span");
-    			span.textContent = "bold text";
-    			t4 = text(" eius voluptate distinctio odit ut quod illo!\n    Nulla consequatur fugiat quia commodi aspernatur necessitatibus est doloremque\n    quam vitae dolorem. Vitae natus ipsum animi officiis et quis obcaecati in molestiae\n    aperiam, perferendis odio a ipsam nam suscipit laboriosam corporis excepturi\n    quisquam? Ratione delectus repellat error maxime quo beatae ullam, quod");
-    			t5 = space();
+    			a.textContent = "insert the ted link that we mentioned in our proposal";
+    			t2 = text("\n    etc etc");
+    			t3 = space();
     			p1 = element("p");
     			p1.textContent = "This is a trr";
     			attr_dev(a, "href", "");
-    			add_location(a, file$7, 5, 31, 85);
-    			attr_dev(span, "class", "bold");
-    			add_location(span, file$7, 7, 4, 163);
+    			add_location(a, file$7, 6, 4, 150);
     			attr_dev(p0, "class", "body-text");
     			add_location(p0, file$7, 4, 2, 32);
     			attr_dev(p1, "class", "body-text");
-    			add_location(p1, file$7, 13, 2, 581);
+    			add_location(p1, file$7, 9, 2, 241);
     			add_location(section, file$7, 3, 0, 20);
     		},
     		l: function claim(nodes) {
@@ -889,9 +882,7 @@ var app = (function () {
     			append_dev(p0, t0);
     			append_dev(p0, a);
     			append_dev(p0, t2);
-    			append_dev(p0, span);
-    			append_dev(p0, t4);
-    			append_dev(section, t5);
+    			append_dev(section, t3);
     			append_dev(section, p1);
     		},
     		p: noop,
@@ -20299,7 +20290,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (53:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}
+    // (73:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}
     function create_each_block_1(ctx) {
     	let g;
     	let line_1;
@@ -20321,14 +20312,14 @@ var app = (function () {
     			attr_dev(line_1, "y1", "0");
     			attr_dev(line_1, "y2", "0");
     			attr_dev(line_1, "stroke", "black");
-    			add_location(line_1, file$5, 55, 8, 1941);
+    			add_location(line_1, file$5, 75, 8, 2315);
     			attr_dev(text_1, "class", "error-axis-text svelte-11zu33o");
     			attr_dev(text_1, "y", "0");
     			attr_dev(text_1, "text-anchor", "end");
     			attr_dev(text_1, "dominant-baseline", "middle");
-    			add_location(text_1, file$5, 63, 8, 2128);
+    			add_location(text_1, file$5, 83, 8, 2502);
     			attr_dev(g, "transform", g_transform_value = `translate(${/*margin*/ ctx[7].left - 5} ${/*accuracyScale*/ ctx[3](/*tick*/ ctx[11]) + 0})`);
-    			add_location(g, file$5, 53, 6, 1802);
+    			add_location(g, file$5, 73, 6, 2176);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -20354,14 +20345,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(53:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}",
+    		source: "(73:4) {#each [0.2, 0.4, 0.6, 0.8, 1.0] as tick}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (118:4) {#each xScale.ticks() as tick}
+    // (138:4) {#each xScale.ticks() as tick}
     function create_each_block$2(ctx) {
     	let g;
     	let text_1;
@@ -20377,9 +20368,9 @@ var app = (function () {
     			attr_dev(text_1, "class", "error-axis-text svelte-11zu33o");
     			attr_dev(text_1, "y", "15");
     			attr_dev(text_1, "text-anchor", "end");
-    			add_location(text_1, file$5, 119, 8, 3687);
+    			add_location(text_1, file$5, 139, 8, 4061);
     			attr_dev(g, "transform", g_transform_value = `translate(${/*xScale*/ ctx[2](/*tick*/ ctx[11]) + 0} ${/*height*/ ctx[0] - /*margin*/ ctx[7].bottom})`);
-    			add_location(g, file$5, 118, 6, 3604);
+    			add_location(g, file$5, 138, 6, 3978);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, g, anchor);
@@ -20402,7 +20393,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(118:4) {#each xScale.ticks() as tick}",
+    		source: "(138:4) {#each xScale.ticks() as tick}",
     		ctx
     	});
 
@@ -20412,13 +20403,24 @@ var app = (function () {
     function create_fragment$6(ctx) {
     	let h1;
     	let t1;
-    	let p;
-    	let t2;
-    	let strong;
-    	let t4;
-    	let a;
-    	let t6;
+    	let p0;
+    	let t3;
+    	let p1;
+    	let strong0;
+    	let t5;
+    	let p2;
+    	let strong1;
     	let t7;
+    	let t8;
+    	let p3;
+    	let t9;
+    	let a;
+    	let t11;
+    	let t12;
+    	let p4;
+    	let strong2;
+    	let t14;
+    	let t15;
     	let div;
     	let svg;
     	let line0;
@@ -20435,11 +20437,11 @@ var app = (function () {
     	let path3;
     	let path3_d_value;
     	let text0;
-    	let t8;
+    	let t16;
     	let text0_y_value;
     	let text0_x_value;
     	let text1;
-    	let t9;
+    	let t17;
     	let text1_x_value;
     	let svg_width_value;
     	let svg_height_value;
@@ -20465,15 +20467,29 @@ var app = (function () {
     			h1 = element("h1");
     			h1.textContent = "Alcohol Type Consumption by Country";
     			t1 = space();
-    			p = element("p");
-    			t2 = text("With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. \n  Now it's your turn to explore! ");
-    			strong = element("strong");
-    			strong.textContent = "Choose a country from the dropdown/type it in the box";
-    			t4 = text(" to see which type of alcohol is most popular in each country.\n  The original data set can be found from this ");
+    			p0 = element("p");
+    			p0.textContent = "With an understanding of how alcohol consumption began in ancient times \n  let us explore how it looks in modern day.";
+    			t3 = space();
+    			p1 = element("p");
+    			strong0 = element("strong");
+    			strong0.textContent = "Now it's your turn to explore!";
+    			t5 = space();
+    			p2 = element("p");
+    			strong1 = element("strong");
+    			strong1.textContent = "Choose a country from the dropdown/type it in the box**";
+    			t7 = text(" \n  to generate a bar chart describing different consumptions rates of different \n  alcohol types of your chosen country.");
+    			t8 = space();
+    			p3 = element("p");
+    			t9 = text("The original data set can be found from this \n  ");
     			a = element("a");
     			a.textContent = "fivethirtyeight";
-    			t6 = text(" link.");
-    			t7 = space();
+    			t11 = text(" link.");
+    			t12 = space();
+    			p4 = element("p");
+    			strong2 = element("strong");
+    			strong2.textContent = "**";
+    			t14 = text("For this prototype our bar chart only shows information for one hard-coded\n  country and we hope to improve the interaction of this in the final model.");
+    			t15 = space();
     			div = element("div");
     			svg = svg_element("svg");
 
@@ -20488,9 +20504,9 @@ var app = (function () {
     			path2 = svg_element("path");
     			path3 = svg_element("path");
     			text0 = svg_element("text");
-    			t8 = text("Decision Boundary Threshold");
+    			t16 = text("Decision Boundary Threshold");
     			text1 = svg_element("text");
-    			t9 = text("Score");
+    			t17 = text("Score");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
@@ -20498,11 +20514,21 @@ var app = (function () {
 
     			attr_dev(h1, "class", "body-header");
     			add_location(h1, file$5, 39, 0, 1014);
-    			add_location(strong, file$5, 42, 33, 1252);
+    			attr_dev(p0, "class", "body-text");
+    			add_location(p0, file$5, 41, 0, 1080);
+    			add_location(strong0, file$5, 47, 2, 1252);
+    			attr_dev(p1, "class", "body-text");
+    			add_location(p1, file$5, 46, 0, 1228);
+    			add_location(strong1, file$5, 51, 2, 1332);
+    			attr_dev(p2, "class", "body-text");
+    			add_location(p2, file$5, 50, 0, 1308);
     			attr_dev(a, "href", "https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption");
-    			add_location(a, file$5, 43, 47, 1432);
-    			attr_dev(p, "class", "body-text");
-    			add_location(p, file$5, 40, 0, 1079);
+    			add_location(a, file$5, 58, 2, 1604);
+    			attr_dev(p3, "class", "body-text");
+    			add_location(p3, file$5, 56, 0, 1532);
+    			add_location(strong2, file$5, 62, 2, 1743);
+    			attr_dev(p4, "class", "body-text");
+    			add_location(p4, file$5, 61, 0, 1719);
     			attr_dev(line0, "class", "error-axis-line");
     			attr_dev(line0, "y1", line0_y__value = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
     			attr_dev(line0, "y2", line0_y__value_1 = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
@@ -20510,7 +20536,7 @@ var app = (function () {
     			attr_dev(line0, "x2", /*width*/ ctx[1]);
     			attr_dev(line0, "stroke", "black");
     			attr_dev(line0, "stroke-width", "2");
-    			add_location(line0, file$5, 74, 4, 2401);
+    			add_location(line0, file$5, 94, 4, 2775);
     			attr_dev(line1, "class", "error-axis-line");
     			attr_dev(line1, "y1", /*margin*/ ctx[7].top);
     			attr_dev(line1, "y2", line1_y__value_1 = /*height*/ ctx[0] - /*margin*/ ctx[7].bottom);
@@ -20518,39 +20544,39 @@ var app = (function () {
     			attr_dev(line1, "x2", /*margin*/ ctx[7].left);
     			attr_dev(line1, "stroke", "black");
     			attr_dev(line1, "stroke-width", "2");
-    			add_location(line1, file$5, 85, 4, 2673);
+    			add_location(line1, file$5, 105, 4, 3047);
     			attr_dev(path0, "class", "outline-line svelte-11zu33o");
     			attr_dev(path0, "d", path0_d_value = /*accuracyPath*/ ctx[5](errorData));
-    			add_location(path0, file$5, 95, 4, 2873);
+    			add_location(path0, file$5, 115, 4, 3247);
     			attr_dev(path1, "class", "path-line svelte-11zu33o");
     			attr_dev(path1, "d", path1_d_value = /*accuracyPath*/ ctx[5](errorData));
     			attr_dev(path1, "stroke", "#c9208a");
-    			add_location(path1, file$5, 96, 4, 2940);
+    			add_location(path1, file$5, 116, 4, 3314);
     			attr_dev(path2, "class", "outline-line svelte-11zu33o");
     			attr_dev(path2, "d", path2_d_value = /*precisionPath*/ ctx[4](errorData));
-    			add_location(path2, file$5, 97, 4, 3021);
+    			add_location(path2, file$5, 117, 4, 3395);
     			attr_dev(path3, "class", "path-line svelte-11zu33o");
     			attr_dev(path3, "d", path3_d_value = /*precisionPath*/ ctx[4](errorData));
     			attr_dev(path3, "stroke", "#ab00d6");
-    			add_location(path3, file$5, 98, 4, 3089);
+    			add_location(path3, file$5, 118, 4, 3463);
     			attr_dev(text0, "class", "error-axis-label svelte-11zu33o");
     			attr_dev(text0, "y", text0_y_value = /*height*/ ctx[0] + /*margin*/ ctx[7].bottom);
     			attr_dev(text0, "x", text0_x_value = (/*width*/ ctx[1] + /*margin*/ ctx[7].left) / 2);
     			attr_dev(text0, "text-anchor", "middle");
-    			add_location(text0, file$5, 102, 4, 3202);
+    			add_location(text0, file$5, 122, 4, 3576);
     			attr_dev(text1, "class", "error-axis-label svelte-11zu33o");
     			attr_dev(text1, "y", /*margin*/ ctx[7].left / 3);
     			attr_dev(text1, "x", text1_x_value = -(/*height*/ ctx[0] / 2));
     			attr_dev(text1, "text-anchor", "middle");
     			attr_dev(text1, "transform", "rotate(-90)");
-    			add_location(text1, file$5, 108, 4, 3379);
+    			add_location(text1, file$5, 128, 4, 3753);
     			attr_dev(svg, "width", svg_width_value = /*width*/ ctx[1] + /*margin*/ ctx[7].left + /*margin*/ ctx[7].right);
     			attr_dev(svg, "height", svg_height_value = /*height*/ ctx[0] + /*margin*/ ctx[7].top + /*margin*/ ctx[7].bottom);
-    			add_location(svg, file$5, 47, 2, 1624);
+    			add_location(svg, file$5, 67, 2, 1998);
     			attr_dev(div, "id", "error-chart");
     			attr_dev(div, "class", "svelte-11zu33o");
     			add_render_callback(() => /*div_elementresize_handler*/ ctx[9].call(div));
-    			add_location(div, file$5, 46, 0, 1547);
+    			add_location(div, file$5, 66, 0, 1921);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -20558,13 +20584,24 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
     			insert_dev(target, t1, anchor);
-    			insert_dev(target, p, anchor);
-    			append_dev(p, t2);
-    			append_dev(p, strong);
-    			append_dev(p, t4);
-    			append_dev(p, a);
-    			append_dev(p, t6);
-    			insert_dev(target, t7, anchor);
+    			insert_dev(target, p0, anchor);
+    			insert_dev(target, t3, anchor);
+    			insert_dev(target, p1, anchor);
+    			append_dev(p1, strong0);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, p2, anchor);
+    			append_dev(p2, strong1);
+    			append_dev(p2, t7);
+    			insert_dev(target, t8, anchor);
+    			insert_dev(target, p3, anchor);
+    			append_dev(p3, t9);
+    			append_dev(p3, a);
+    			append_dev(p3, t11);
+    			insert_dev(target, t12, anchor);
+    			insert_dev(target, p4, anchor);
+    			append_dev(p4, strong2);
+    			append_dev(p4, t14);
+    			insert_dev(target, t15, anchor);
     			insert_dev(target, div, anchor);
     			append_dev(div, svg);
 
@@ -20581,9 +20618,9 @@ var app = (function () {
     			append_dev(svg, path2);
     			append_dev(svg, path3);
     			append_dev(svg, text0);
-    			append_dev(text0, t8);
+    			append_dev(text0, t16);
     			append_dev(svg, text1);
-    			append_dev(text1, t9);
+    			append_dev(text1, t17);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				if (each_blocks[i]) {
@@ -20697,8 +20734,16 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
     			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(p);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(p0);
+    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(p1);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(p2);
+    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(p3);
+    			if (detaching) detach_dev(t12);
+    			if (detaching) detach_dev(p4);
+    			if (detaching) detach_dev(t15);
     			if (detaching) detach_dev(div);
     			destroy_each(each_blocks_1, detaching);
     			destroy_each(each_blocks, detaching);

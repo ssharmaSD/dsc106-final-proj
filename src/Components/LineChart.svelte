@@ -4,6 +4,12 @@
   import { errorData } from "../datasets.js";
   import { format } from "d3-format";
 
+
+  <!-- my imports -->
+  import { scaleBand, scaleLinear } from "d3-scale";
+  import { select } from "d3-selection";
+  import { csv } from "d3-fetch";
+
   const formatter = format(".0%");
 
   let height = 500;
@@ -15,6 +21,13 @@
     left: mobile ? 0 : 80,
     right: mobile ? 0 : 10,
   };
+
+
+  <!-- loading in data from drinks.csv-->
+  let data = [];
+
+  csv(drinks.csv)
+
 
   $: xScale = scaleLinear()
     .domain([0, 14.4])
@@ -38,10 +51,30 @@
 </script>
 
 <h1 class="body-header">Alcohol Type Consumption by Country</h1>
+
 <p class="body-text">
-  With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. 
-  Now it's your turn to explore! <strong>Choose a country from the dropdown/type it in the box</strong> to see which type of alcohol is most popular in each country.
-  The original data set can be found from this <a href="https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption">fivethirtyeight</a> link. 
+  With an understanding of how alcohol consumption began in ancient times 
+  let us explore how it looks in modern day.
+</p>
+
+<p class="body-text">
+  <strong>Now it's your turn to explore!</strong>
+</p>
+  
+<p class="body-text">
+  <strong>Choose a country from the dropdown/type it in the box**</strong> 
+  to generate a bar chart describing different consumptions rates of different 
+  alcohol types of your chosen country.
+</p>
+
+<p class="body-text">
+  The original data set can be found from this 
+  <a href="https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption">fivethirtyeight</a> link. 
+</p>
+
+<p class="body-text">
+  <strong>**</strong>For this prototype our bar chart only shows information for one hard-coded
+  country and we hope to improve the interaction of this in the final model. 
 </p>
 
 <div id="error-chart" bind:offsetWidth={width} bind:offsetHeight={height}>
