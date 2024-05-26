@@ -1,12 +1,7 @@
 <script>
-  <!-- my imports -->
   import { scaleBand, scaleLinear } from "d3-scale";
   import { select } from "d3-selection";
   import { csv } from "d3-fetch";
-
-  <!-- const formatter = format(".0%"); -->
-  <!-- const formatter = format(".0%"); -->
-  <!-- const formatter = format(".0%"); -->
 
   let height = 500;
   let width = 500;
@@ -19,7 +14,6 @@
   };
 
 
-  <!-- loading in data from drinks.csv-->
   let data = [];
   let selectedCountry = 'USA'; // Default selected country
 
@@ -61,11 +55,11 @@
       .range([height - margin.bottom, margin.top]);
   
 
-    <!-- updating scales -->
+ 
     yScale.domain([0, d3.max(barData, d => d.value)]);
     xScale.domain(barData.map(d => d.label));
 
-    <!-- creating the bars-->
+
     svg.selectAll(".bar")
       .data(barData)
       .enter()
@@ -77,7 +71,7 @@
       .attr("height", d => height - margin.bottom - yScale(d.value))
       .attr("fill", "steelblue");
 
-    <!-- add axes -->
+
     const xAxis = g => g
       .attr("transform", `translate(0,${height - margin.bottom})`)
       .call(d3.axisBottom(xScale));
