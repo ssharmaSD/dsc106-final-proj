@@ -2,6 +2,7 @@
   import { scaleBand, scaleLinear } from "d3-scale";
   import { select } from "d3-selection";
   import { csv } from "d3-fetch";
+  import * as d3 from "d3";
 
   let height = 500;
   let width = 500;
@@ -13,10 +14,10 @@
     right: mobile ? 0 : 10,
   };
 
-
   let data = [];
-  let selectedCountry = 'USA'; // Default selected country
+  let selectedCountry = 'Albania'; // Default selected country
 
+  // Load the CSV data
   csv('/data/drinks.csv').then(loadedData => {
     data = loadedData.map(d => ({
       country: d.country,
@@ -28,7 +29,7 @@
     drawBarChart(selectedCountry);
   });
 
-
+  // Function to draw bar chart
   function drawBarChart(country) {
     const svg = select("#visualization");
     svg.selectAll("*").remove();
@@ -43,7 +44,7 @@
       { label: 'Wine Servings', value: countryData.wine_servings },
       { label: 'Total Litres of Pure Alcohol', value: countryData.total_litres_of_pure_alcohol }
     ];
-    
+
     const xScale = scaleBand()
       .domain(barData.map(d => d.label))
       .range([margin.left, width - margin.right])
@@ -53,13 +54,8 @@
       .domain([0, d3.max(barData, d => d.value)])
       .nice()
       .range([height - margin.bottom, margin.top]);
-  
 
- 
-    yScale.domain([0, d3.max(barData, d => d.value)]);
-    xScale.domain(barData.map(d => d.label));
-
-
+    // Create bars
     svg.selectAll(".bar")
       .data(barData)
       .enter()
@@ -71,7 +67,7 @@
       .attr("height", d => height - margin.bottom - yScale(d.value))
       .attr("fill", "steelblue");
 
-
+    // Add axes
     const xAxis = g => g
       .attr("transform", `translate(0,${height - margin.bottom})`)
       .call(d3.axisBottom(xScale));
@@ -109,7 +105,7 @@
 
 <p class="body-text">
   <strong>**</strong>For this prototype our bar chart only shows information for one hard-coded
-  country and we hope to improve the interaction of this in the final model. 
+  country and we hope to improve the interaction of this in the final model.  
 </p>
 
 <div id="error-chart" bind:offsetWidth={width} bind:offsetHeight={height}>
@@ -154,6 +150,7 @@
       font-size: 0.8rem;
     }
   }
+
   /* mobile */
   @media screen and (max-width: 750px) {
     #error-chart {
