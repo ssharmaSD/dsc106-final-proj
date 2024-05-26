@@ -1,16 +1,10 @@
 <script>
-  import { line, curveStep } from "d3-shape";
-  import { scaleLinear } from "d3-scale";
-  import { errorData } from "../datasets.js";
-  import { format } from "d3-format";
-
-
   <!-- my imports -->
   import { scaleBand, scaleLinear } from "d3-scale";
   import { select } from "d3-selection";
   import { csv } from "d3-fetch";
 
-  const formatter = format(".0%");
+  <!-- const formatter = format(".0%"); -->
 
   let height = 500;
   let width = 500;
@@ -34,28 +28,15 @@
       spirit_servings: +d.spirit_servings,
       wine_servings: +d.wine_servings,
       total_litres_of_pure_alcohol: +d.total_litres_of_pure_alcohol
-
     }));
     drawBarChart(selectedCountry);
-  })
-
-  $: filteredData = data.filter(d => d.country === selectedCountry);
+  });
 
 
-  $: xScale = scaleBand()
-    .domain(filteredData.map(d => d.country))
-    .range([margin.left, width - margin.right])
-    .padding(0.1);
-
-  $: yScale = scaleLinear()
-    .domain([0, d3.max(filteredData, d => d.beer_servings)])
-    .range([height - margin.bottom, margin.top]);
-
-
-  <!-- function for bar chart -->
   function drawBarChart(country) {
-    const svg = select('#visualization');
+    const svg = select("#visualization");
     svg.selectAll("*").remove();
+
     const countryData = data.filter(d => d.country === country)[0];
 
     if (!countryData) return;
@@ -64,12 +45,22 @@
       { label: 'Beer Servings', value: countryData.beer_servings },
       { label: 'Spirit Servings', value: countryData.spirit_servings },
       { label: 'Wine Servings', value: countryData.wine_servings },
-
-      <!-- { label: 'Total Litres of Pure Alcohol', value: countryData.total_litres_of_pure_alcohol } -->
+      { label: 'Total Litres of Pure Alcohol', value: countryData.total_litres_of_pure_alcohol }
     ];
+    
+    const xScale = scaleBand()
+      .domain(barData.map(d => d.label))
+      .range([margin.left, width - margin.right])
+      .padding(0.1);
+
+    const yScale = scaleLinear()
+      .domain([0, d3.max(barData, d => d.value)])
+      .nice()
+      .range([height - margin.bottom, margin.top]);
+  
 
     <!-- updating scales -->
-     yScale.domain([0, d3.max(barData, d => d.value)]);
+    yScale.domain([0, d3.max(barData, d => d.value)]);
     xScale.domain(barData.map(d => d.label));
 
     <!-- creating the bars-->
