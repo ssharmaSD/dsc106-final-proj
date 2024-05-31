@@ -24,6 +24,7 @@
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   let data = [];
 <<<<<<< HEAD:src/Components/LineChart.svelte
   let selectedCountry = 'Albania'; // Default selected country
@@ -97,6 +98,8 @@
 
 =======
 >>>>>>> parent of b485785 (adjustments to bar chart write up)
+=======
+>>>>>>> parent of b485785 (adjustments to bar chart write up)
   $: xScale = scaleLinear()
     .domain([0, 14.4])
     .range([margin.left, width - margin.right]);
@@ -122,6 +125,7 @@
 <h1 class="body-header">Alcohol Type Consumption by Country</h1>
 <p class="body-text">
 <<<<<<< HEAD
+<<<<<<< HEAD
   With an understanding of how alcohol consumption began in ancient times 
   let us explore how it looks in modern day.
 </p>
@@ -144,6 +148,11 @@
 <p class="body-text">
   <strong>**</strong>For this prototype our bar chart only shows information for one hard-coded
   country and we hope to improve the interaction of this in the final model.  
+=======
+  With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. 
+  Now it's your turn to explore! <strong>Choose a country from the dropdown/type it in the box</strong> to see which type of alcohol is most popular in each country.
+  The original data set can be found from this <a href="https://github.com/fivethirtyeight/data/tree/master/alcohol-consumption">fivethirtyeight</a> link. 
+>>>>>>> parent of b485785 (adjustments to bar chart write up)
 =======
   With an understanding of how alcohol consumption began in ancient times let us explore how it looks in modern day. 
   Now it's your turn to explore! <strong>Choose a country from the dropdown/type it in the box</strong> to see which type of alcohol is most popular in each country.
